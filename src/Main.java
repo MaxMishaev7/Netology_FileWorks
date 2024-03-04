@@ -2,12 +2,10 @@
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         String rootPath = "C://Games/";
-        String partOfPath = "";
-        String fileName = "";
+        String partOfPath;
         StringBuilder strTemp = new StringBuilder();
-        String tempStr = "";
+        String tempStr;
         java.time.LocalDateTime dateTime;
         String[][] dirArr = {
                 {"src", "src/main", "src/test"}, //"src/main/Main.java"
@@ -28,7 +26,7 @@ public class Main {
                     System.out.println("The Folder " + dir.getName() + " already exists");
                 }
                  dateTime = java.time.LocalDateTime.now();
-                strTemp = strTemp.append(dateTime).append(" ").append(tempStr).append(System.lineSeparator());
+                strTemp.append(dateTime).append(" ").append(tempStr).append(System.lineSeparator());
             }
         }
         String[] fileArr = {"src/main/Main.java", "src/main/Utils.java", "temp/temp.txt"};
@@ -48,7 +46,7 @@ public class Main {
                     System.out.println("File " + file.getName() + " already exists");
                 }
                 dateTime = java.time.LocalDateTime.now();
-                strTemp = strTemp.append(dateTime).append(" ").append(tempStr).append(System.lineSeparator());
+                strTemp.append(dateTime).append(" ").append(tempStr).append(System.lineSeparator());
             }
             catch(java.io.IOException ex)
             {
